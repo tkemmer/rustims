@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>imspy.timstof package &#8212; imspy 0.2.33 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
-    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
     <script src="_static/documentation_options.js?v=73d7b0fc"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
@@ -69,15 +69,19 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="imspy.timstof.dbsearch.html#module-imspy.timstof.dbsearch.utility">imspy.timstof.dbsearch.utility module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.check_memory"><code class="docutils literal notranslate"><span class="pre">check_memory()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.extract_timstof_dda_data"><code class="docutils literal notranslate"><span class="pre">extract_timstof_dda_data()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.generate_balanced_im_dataset"><code class="docutils literal notranslate"><span class="pre">generate_balanced_im_dataset()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.generate_balanced_rt_dataset"><code class="docutils literal notranslate"><span class="pre">generate_balanced_rt_dataset()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.generate_training_data"><code class="docutils literal notranslate"><span class="pre">generate_training_data()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.get_searchable_spec"><code class="docutils literal notranslate"><span class="pre">get_searchable_spec()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.linear_map"><code class="docutils literal notranslate"><span class="pre">linear_map()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.list_to_semicolon_string"><code class="docutils literal notranslate"><span class="pre">list_to_semicolon_string()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.map_to_domain"><code class="docutils literal notranslate"><span class="pre">map_to_domain()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.merge_dicts_with_merge_dict"><code class="docutils literal notranslate"><span class="pre">merge_dicts_with_merge_dict()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.re_score_psms"><code class="docutils literal notranslate"><span class="pre">re_score_psms()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.parse_string_list"><code class="docutils literal notranslate"><span class="pre">parse_string_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.parse_to_tims2rescore"><code class="docutils literal notranslate"><span class="pre">parse_to_tims2rescore()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.peptide_length"><code class="docutils literal notranslate"><span class="pre">peptide_length()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.sanitize_charge"><code class="docutils literal notranslate"><span class="pre">sanitize_charge()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.sanitize_mz"><code class="docutils literal notranslate"><span class="pre">sanitize_mz()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="imspy.timstof.dbsearch.html#imspy.timstof.dbsearch.utility.split_fasta"><code class="docutils literal notranslate"><span class="pre">split_fasta()</span></code></a></li>
@@ -99,11 +103,11 @@
 <span id="imspy-timstof-collision-module"></span><h2>imspy.timstof.collision module<a class="headerlink" href="#module-imspy.timstof.collision" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="imspy.timstof.collision.TimsTofCollisionEnergy">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.collision.</span></span><span class="sig-name descname"><span class="pre">TimsTofCollisionEnergy</span></span><a class="headerlink" href="#imspy.timstof.collision.TimsTofCollisionEnergy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.collision.</span></span><span class="sig-name descname"><span class="pre">TimsTofCollisionEnergy</span></span><a class="headerlink" href="#imspy.timstof.collision.TimsTofCollisionEnergy" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.collision.TimsTofCollisionEnergy.get_collision_energies">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_collision_energies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.collision.TimsTofCollisionEnergy.get_collision_energies" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_collision_energies</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.collision.TimsTofCollisionEnergy.get_collision_energies" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</span></p>
@@ -113,7 +117,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.collision.TimsTofCollisionEnergy.get_collision_energy">
-<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_collision_energy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.collision.TimsTofCollisionEnergy.get_collision_energy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_collision_energy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.collision.TimsTofCollisionEnergy.get_collision_energy" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span></p>
@@ -125,7 +129,7 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="imspy.timstof.collision.TimsTofCollisionEnergyDIA">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.collision.</span></span><span class="sig-name descname"><span class="pre">TimsTofCollisionEnergyDIA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_window_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collision_energy</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.collision.TimsTofCollisionEnergyDIA" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.collision.</span></span><span class="sig-name descname"><span class="pre">TimsTofCollisionEnergyDIA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_window_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collision_energy</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.collision.TimsTofCollisionEnergyDIA" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#imspy.timstof.collision.TimsTofCollisionEnergy" title="imspy.timstof.collision.TimsTofCollisionEnergy"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimsTofCollisionEnergy</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.collision.TimsTofCollisionEnergyDIA.get_collision_energies">
@@ -154,11 +158,11 @@
 <span id="imspy-timstof-data-module"></span><h2>imspy.timstof.data module<a class="headerlink" href="#module-imspy.timstof.data" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="imspy.timstof.data.AcquisitionMode">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.data.</span></span><span class="sig-name descname"><span class="pre">AcquisitionMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.data.AcquisitionMode" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.data.</span></span><span class="sig-name descname"><span class="pre">AcquisitionMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.data.AcquisitionMode" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="imspy.simulation.html#imspy.simulation.annotation.RustWrapperObject" title="imspy.simulation.annotation.RustWrapperObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">RustWrapperObject</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.data.AcquisitionMode.from_py_ptr">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ptr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.data.AcquisitionMode.from_py_ptr" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ptr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.data.AcquisitionMode.from_py_ptr" title="Link to this definition">¶</a></dt>
 <dd><p>Get an AcquisitionMode from a pointer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -180,7 +184,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.data.AcquisitionMode.mode">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#imspy.timstof.data.AcquisitionMode.mode" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#imspy.timstof.data.AcquisitionMode.mode" title="Link to this definition">¶</a></dt>
 <dd><p>Get the acquisition mode.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -196,11 +200,11 @@
 
 <dl class="py class">
 <dt class="sig sig-object py" id="imspy.timstof.data.TimsDataset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.data.</span></span><span class="sig-name descname"><span class="pre">TimsDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.data.TimsDataset" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.data.</span></span><span class="sig-name descname"><span class="pre">TimsDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_bruker_sdk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.data.TimsDataset" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.data.TimsDataset.acquisition_mode">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acquisition_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#imspy.timstof.data.TimsDataset.acquisition_mode" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acquisition_mode</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#imspy.timstof.data.TimsDataset.acquisition_mode" title="Link to this definition">¶</a></dt>
 <dd><p>Get the acquisition mode.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -214,7 +218,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.data.TimsDataset.acquisition_mode_numeric">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acquisition_mode_numeric</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.data.TimsDataset.acquisition_mode_numeric" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acquisition_mode_numeric</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.data.TimsDataset.acquisition_mode_numeric" title="Link to this definition">¶</a></dt>
 <dd><p>Get the acquisition mode as a numerical value.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -228,7 +232,7 @@
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.data.TimsDataset.average_cycle_length">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">average_cycle_length</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.data.TimsDataset.average_cycle_length" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">average_cycle_length</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.data.TimsDataset.average_cycle_length" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -309,12 +313,12 @@ NDArray[np.float64]: Intensity values.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.data.TimsDataset.description">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#imspy.timstof.data.TimsDataset.description" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#imspy.timstof.data.TimsDataset.description" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.data.TimsDataset.frame_count">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frame_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.data.TimsDataset.frame_count" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frame_count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.data.TimsDataset.frame_count" title="Link to this definition">¶</a></dt>
 <dd><p>Get the number of frames.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -382,12 +386,12 @@ NDArray[np.float64]: Intensity values.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.data.TimsDataset.im_lower">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">im_lower</span></span><a class="headerlink" href="#imspy.timstof.data.TimsDataset.im_lower" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">im_lower</span></span><a class="headerlink" href="#imspy.timstof.data.TimsDataset.im_lower" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.data.TimsDataset.im_upper">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">im_upper</span></span><a class="headerlink" href="#imspy.timstof.data.TimsDataset.im_upper" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">im_upper</span></span><a class="headerlink" href="#imspy.timstof.data.TimsDataset.im_upper" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -434,7 +438,7 @@ NDArray[np.float64]: Intensity values.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.data.TimsDataset.mz_lower">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mz_lower</span></span><a class="headerlink" href="#imspy.timstof.data.TimsDataset.mz_lower" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mz_lower</span></span><a class="headerlink" href="#imspy.timstof.data.TimsDataset.mz_lower" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -459,12 +463,12 @@ NDArray[np.float64]: Intensity values.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.data.TimsDataset.mz_upper">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mz_upper</span></span><a class="headerlink" href="#imspy.timstof.data.TimsDataset.mz_upper" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mz_upper</span></span><a class="headerlink" href="#imspy.timstof.data.TimsDataset.mz_upper" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.data.TimsDataset.num_scans">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_scans</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.data.TimsDataset.num_scans" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_scans</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.data.TimsDataset.num_scans" title="Link to this definition">¶</a></dt>
 <dd><p>Get the number of scans.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -518,26 +522,31 @@ NDArray[np.float64]: Intensity values.</p>
 
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="imspy.timstof.data.is_amd64">
+<span class="sig-prename descclassname"><span class="pre">imspy.timstof.data.</span></span><span class="sig-name descname"><span class="pre">is_amd64</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.data.is_amd64" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </section>
 <section id="module-imspy.timstof.dda">
 <span id="imspy-timstof-dda-module"></span><h2>imspy.timstof.dda module<a class="headerlink" href="#module-imspy.timstof.dda" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="imspy.timstof.dda.FragmentDDA">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.dda.</span></span><span class="sig-name descname"><span class="pre">FragmentDDA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precursor_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collision_energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_fragment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.FragmentDDA" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.dda.</span></span><span class="sig-name descname"><span class="pre">FragmentDDA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precursor_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collision_energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_fragment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.FragmentDDA" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="imspy.simulation.html#imspy.simulation.annotation.RustWrapperObject" title="imspy.simulation.annotation.RustWrapperObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">RustWrapperObject</span></code></a></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.dda.FragmentDDA.collision_energy">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">collision_energy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.dda.FragmentDDA.collision_energy" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">collision_energy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.dda.FragmentDDA.collision_energy" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.dda.FragmentDDA.frame_id">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.dda.FragmentDDA.frame_id" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.dda.FragmentDDA.frame_id" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.dda.FragmentDDA.from_py_ptr">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.FragmentDDA.from_py_ptr" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fragment</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.FragmentDDA.from_py_ptr" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -547,23 +556,104 @@ NDArray[np.float64]: Intensity values.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.dda.FragmentDDA.precursor_id">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precursor_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.dda.FragmentDDA.precursor_id" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precursor_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.dda.FragmentDDA.precursor_id" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.dda.FragmentDDA.selected_fragment">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selected_fragment</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#imspy.timstof.frame.TimsFrame" title="imspy.timstof.frame.TimsFrame"><span class="pre">TimsFrame</span></a></em><a class="headerlink" href="#imspy.timstof.dda.FragmentDDA.selected_fragment" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selected_fragment</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#imspy.timstof.frame.TimsFrame" title="imspy.timstof.frame.TimsFrame"><span class="pre">TimsFrame</span></a></em><a class="headerlink" href="#imspy.timstof.dda.FragmentDDA.selected_fragment" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.dda.</span></span><span class="sig-name descname"><span class="pre">PrecursorDDA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precursor_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">highest_intensity_mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">average_mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inverse_ion_mobility</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collision_energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precuror_total_intensity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isolation_mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isolation_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mono_mz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">charge</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="imspy.simulation.html#imspy.simulation.annotation.RustWrapperObject" title="imspy.simulation.annotation.RustWrapperObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">RustWrapperObject</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.average_mz">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">average_mz</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.average_mz" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.charge">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">charge</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.charge" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.collision_energy">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">collision_energy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.collision_energy" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.frame_id">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.frame_id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.from_py_ptr">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">precursor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.from_py_ptr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.get_py_ptr">
+<span class="sig-name descname"><span class="pre">get_py_ptr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.get_py_ptr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.highest_intensity_mz">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">highest_intensity_mz</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.highest_intensity_mz" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.inverse_ion_mobility">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">inverse_ion_mobility</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.inverse_ion_mobility" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.isolation_mz">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isolation_mz</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.isolation_mz" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.isolation_width">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isolation_width</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.isolation_width" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.mono_mz">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mono_mz</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.mono_mz" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.precuror_total_intensity">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precuror_total_intensity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.precuror_total_intensity" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.precursor_id">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precursor_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.precursor_id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.dda.PrecursorDDA.to_sage_precursor">
+<span class="sig-name descname"><span class="pre">to_sage_precursor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.PrecursorDDA.to_sage_precursor" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Precursor</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="imspy.timstof.dda.TimsDatasetDDA">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.dda.</span></span><span class="sig-name descname"><span class="pre">TimsDatasetDDA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.TimsDatasetDDA" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.dda.</span></span><span class="sig-name descname"><span class="pre">TimsDatasetDDA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_bruker_sdk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.TimsDatasetDDA" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#imspy.timstof.data.TimsDataset" title="imspy.timstof.data.TimsDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimsDataset</span></code></a>, <a class="reference internal" href="imspy.simulation.html#imspy.simulation.annotation.RustWrapperObject" title="imspy.simulation.annotation.RustWrapperObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">RustWrapperObject</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.dda.TimsDatasetDDA.from_py_ptr">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ptr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.TimsDatasetDDA.from_py_ptr" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ptr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.TimsDatasetDDA.from_py_ptr" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -583,9 +673,47 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.dda.TimsDatasetDDA.get_precursor_frames">
+<span class="sig-name descname"><span class="pre">get_precursor_frames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_intensity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_peaks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_threads</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.TimsDatasetDDA.get_precursor_frames" title="Link to this definition">¶</a></dt>
+<dd><p>Get precursor frames.
+:type min_intensity: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>
+:param min_intensity: minimum intensity a peak must have to be considered
+:type max_peaks: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>
+:param max_peaks: maximum number of peaks to consider, frames will be sorted by intensity and only the top max_peaks will be considered
+:type num_threads: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>
+:param num_threads: number of threads to use for processing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List of all precursor frames</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>List[<a class="reference internal" href="#imspy.timstof.frame.TimsFrame" title="imspy.timstof.frame.TimsFrame">TimsFrame</a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.dda.TimsDatasetDDA.get_py_ptr">
 <span class="sig-name descname"><span class="pre">get_py_ptr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.TimsDatasetDDA.get_py_ptr" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.dda.TimsDatasetDDA.get_sage_processed_precursors">
+<span class="sig-name descname"><span class="pre">get_sage_processed_precursors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_intensity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">75</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_peaks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_threads</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.TimsDatasetDDA.get_sage_processed_precursors" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ProcessedSpectrum</span></code>]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.dda.TimsDatasetDDA.get_selected_precursors">
+<span class="sig-name descname"><span class="pre">get_selected_precursors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dda.TimsDatasetDDA.get_selected_precursors" title="Link to this definition">¶</a></dt>
+<dd><p>Get meta data for all selected precursors
+:returns: List of all selected precursors
+:rtype: List[PrecursorDDA]</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -594,11 +722,11 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 <span id="imspy-timstof-dia-module"></span><h2>imspy.timstof.dia module<a class="headerlink" href="#module-imspy.timstof.dia" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="imspy.timstof.dia.TimsDatasetDIA">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.dia.</span></span><span class="sig-name descname"><span class="pre">TimsDatasetDIA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dia.TimsDatasetDIA" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.dia.</span></span><span class="sig-name descname"><span class="pre">TimsDatasetDIA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_bruker_sdk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dia.TimsDatasetDIA" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#imspy.timstof.data.TimsDataset" title="imspy.timstof.data.TimsDataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimsDataset</span></code></a>, <a class="reference internal" href="imspy.simulation.html#imspy.simulation.annotation.RustWrapperObject" title="imspy.simulation.annotation.RustWrapperObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">RustWrapperObject</span></code></a></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.dia.TimsDatasetDIA.dia_ms_ms_info">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dia_ms_ms_info</span></span><a class="headerlink" href="#imspy.timstof.dia.TimsDatasetDIA.dia_ms_ms_info" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dia_ms_ms_info</span></span><a class="headerlink" href="#imspy.timstof.dia.TimsDatasetDIA.dia_ms_ms_info" title="Link to this definition">¶</a></dt>
 <dd><p>Get DIA MS/MS info.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -612,7 +740,7 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.dia.TimsDatasetDIA.dia_ms_ms_windows">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dia_ms_ms_windows</span></span><a class="headerlink" href="#imspy.timstof.dia.TimsDatasetDIA.dia_ms_ms_windows" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dia_ms_ms_windows</span></span><a class="headerlink" href="#imspy.timstof.dia.TimsDatasetDIA.dia_ms_ms_windows" title="Link to this definition">¶</a></dt>
 <dd><p>Get PASEF meta data for DIA.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -626,7 +754,7 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.dia.TimsDatasetDIA.from_py_ptr">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dia.TimsDatasetDIA.from_py_ptr" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dia.TimsDatasetDIA.from_py_ptr" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -648,6 +776,49 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.dia.TimsDatasetDIA.sample_fragment_signal">
+<span class="sig-name descname"><span class="pre">sample_fragment_signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_frames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_intensity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">25.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">take_probability</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dia.TimsDatasetDIA.sample_fragment_signal" title="Link to this definition">¶</a></dt>
+<dd><p>Sample fragment signal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_frames</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – Number of frames.</p></li>
+<li><p><strong>window_group</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – Window group to take frames from.</p></li>
+<li><p><strong>max_intensity</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – Maximum intensity.</p></li>
+<li><p><strong>take_probability</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – Probability to take signals from sampled frames.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frame.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#imspy.timstof.frame.TimsFrame" title="imspy.timstof.frame.TimsFrame">TimsFrame</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.dia.TimsDatasetDIA.sample_precursor_signal">
+<span class="sig-name descname"><span class="pre">sample_precursor_signal</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_frames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_intensity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">25.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">take_probability</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.dia.TimsDatasetDIA.sample_precursor_signal" title="Link to this definition">¶</a></dt>
+<dd><p>Sample precursor signal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_frames</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span>) – Number of frames.</p></li>
+<li><p><strong>max_intensity</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – Maximum intensity.</p></li>
+<li><p><strong>take_probability</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – Probability to take signals from sampled frames.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frame.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#imspy.timstof.frame.TimsFrame" title="imspy.timstof.frame.TimsFrame">TimsFrame</a></p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -655,11 +826,11 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 <span id="imspy-timstof-frame-module"></span><h2>imspy.timstof.frame module<a class="headerlink" href="#module-imspy.timstof.frame" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.frame.</span></span><span class="sig-name descname"><span class="pre">TimsFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ms_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retention_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mobility</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tof</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrame" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.frame.</span></span><span class="sig-name descname"><span class="pre">TimsFrame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ms_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retention_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mobility</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tof</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrame" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="imspy.simulation.html#imspy.simulation.annotation.RustWrapperObject" title="imspy.simulation.annotation.RustWrapperObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">RustWrapperObject</span></code></a></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.df">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">df</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.df" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">df</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.df" title="Link to this definition">¶</a></dt>
 <dd><p>Data as a pandas DataFrame.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -699,7 +870,7 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.frame_id">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.frame_id" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.frame_id" title="Link to this definition">¶</a></dt>
 <dd><p>Frame ID.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -713,7 +884,7 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.from_py_ptr">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.from_py_ptr" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.from_py_ptr" title="Link to this definition">¶</a></dt>
 <dd><p>Create a TimsFrame from a PyTimsFrame.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -730,7 +901,7 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.from_tims_spectra">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_tims_spectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectra</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.from_tims_spectra" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_tims_spectra</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectra</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.from_tims_spectra" title="Link to this definition">¶</a></dt>
 <dd><p>Create a TimsFrame from a list of TimsSpectrum.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -747,7 +918,7 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.from_windows">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_windows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">windows</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.from_windows" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_windows</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">windows</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.from_windows" title="Link to this definition">¶</a></dt>
 <dd><p>Create a TimsFrame from a list of windows.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -777,13 +948,27 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.get_mobility_mean_and_variance">
+<span class="sig-name descname"><span class="pre">get_mobility_mean_and_variance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.get_mobility_mean_and_variance" title="Link to this definition">¶</a></dt>
+<dd><p>Get the mean and variance of the inverse mobility.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Mean and variance of the inverse mobility.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple[float, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.get_py_ptr">
 <span class="sig-name descname"><span class="pre">get_py_ptr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.get_py_ptr" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.intensity">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.intensity" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.intensity" title="Link to this definition">¶</a></dt>
 <dd><p>Intensity.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -797,7 +982,7 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.mobility">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mobility</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.mobility" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mobility</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.mobility" title="Link to this definition">¶</a></dt>
 <dd><p>Inverse mobility.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -811,7 +996,7 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.ms_type">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ms_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.ms_type" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ms_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.ms_type" title="Link to this definition">¶</a></dt>
 <dd><p>MS type.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -825,7 +1010,7 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.ms_type_as_string">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ms_type_as_string</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.ms_type_as_string" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ms_type_as_string</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.ms_type_as_string" title="Link to this definition">¶</a></dt>
 <dd><p>MS type.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -839,7 +1024,7 @@ datasets is established via bruker so / dll, using multiple threads is unstable.
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.mz">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mz</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.mz" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mz</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.mz" title="Link to this definition">¶</a></dt>
 <dd><p>m/z.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -868,7 +1053,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.retention_time">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">retention_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.retention_time" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">retention_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.retention_time" title="Link to this definition">¶</a></dt>
 <dd><p>Retention time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -882,7 +1067,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.scan">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scan</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">int32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.scan" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scan</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">int32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.scan" title="Link to this definition">¶</a></dt>
 <dd><p>Scan.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -987,7 +1172,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrame.tof">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tof</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">int32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.tof" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tof</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">int32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrame.tof" title="Link to this definition">¶</a></dt>
 <dd><p>Time of flight.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1020,11 +1205,11 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrameVectorized">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.frame.</span></span><span class="sig-name descname"><span class="pre">TimsFrameVectorized</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ms_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retention_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mobility</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tof</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.frame.</span></span><span class="sig-name descname"><span class="pre">TimsFrameVectorized</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ms_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retention_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mobility</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tof</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="imspy.simulation.html#imspy.simulation.annotation.RustWrapperObject" title="imspy.simulation.annotation.RustWrapperObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">RustWrapperObject</span></code></a></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrameVectorized.df">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">df</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.df" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">df</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.df" title="Link to this definition">¶</a></dt>
 <dd><p>Data as a pandas DataFrame.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1064,7 +1249,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrameVectorized.frame_id">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.frame_id" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.frame_id" title="Link to this definition">¶</a></dt>
 <dd><p>Frame ID.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1078,7 +1263,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrameVectorized.from_py_ptr">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.from_py_ptr" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.from_py_ptr" title="Link to this definition">¶</a></dt>
 <dd><p>Create a TimsFrameVectorized from a PyTimsFrameVectorized.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1089,6 +1274,23 @@ TimsFrame: Subsampled frame.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="#imspy.timstof.frame.TimsFrameVectorized" title="imspy.timstof.frame.TimsFrameVectorized">TimsFrameVectorized</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrameVectorized.get_arrays_at_index">
+<span class="sig-name descname"><span class="pre">get_arrays_at_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.get_arrays_at_index" title="Link to this definition">¶</a></dt>
+<dd><p>Get the arrays at a given index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – Index.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Arrays at the index.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>NDArray[np.float64]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1105,7 +1307,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrameVectorized.indices">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">indices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">int32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.indices" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">indices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">int32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.indices" title="Link to this definition">¶</a></dt>
 <dd><p>Indices.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1119,7 +1321,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrameVectorized.intensity">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.intensity" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.intensity" title="Link to this definition">¶</a></dt>
 <dd><p>Intensity.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1133,7 +1335,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrameVectorized.mobility">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mobility</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.mobility" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mobility</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">float64</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.mobility" title="Link to this definition">¶</a></dt>
 <dd><p>Inverse mobility.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1147,7 +1349,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrameVectorized.ms_type">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ms_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.ms_type" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ms_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.ms_type" title="Link to this definition">¶</a></dt>
 <dd><p>MS type.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1161,7 +1363,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrameVectorized.retention_time">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">retention_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.retention_time" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">retention_time</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.retention_time" title="Link to this definition">¶</a></dt>
 <dd><p>Retention time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1175,7 +1377,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrameVectorized.scan">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scan</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">int32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.scan" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scan</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">int32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.scan" title="Link to this definition">¶</a></dt>
 <dd><p>Scan.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1189,7 +1391,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.frame.TimsFrameVectorized.tof">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tof</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">int32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.tof" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tof</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dtype</span><span class="p"><span class="pre">[</span></span><span class="pre">int32</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.frame.TimsFrameVectorized.tof" title="Link to this definition">¶</a></dt>
 <dd><p>Time of flight.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1207,8 +1409,165 @@ TimsFrame: Subsampled frame.</p>
 <section id="module-imspy.timstof.quadrupole">
 <span id="imspy-timstof-quadrupole-module"></span><h2>imspy.timstof.quadrupole module<a class="headerlink" href="#module-imspy.timstof.quadrupole" title="Link to this heading">¶</a></h2>
 <dl class="py class">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.PasefMeta">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.quadrupole.</span></span><span class="sig-name descname"><span class="pre">PasefMeta</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isolation_mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isolation_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collision_energy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precursor</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.PasefMeta" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.PasefMeta.collision_energy">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">collision_energy</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.quadrupole.PasefMeta.collision_energy" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.PasefMeta.frame">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frame</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.quadrupole.PasefMeta.frame" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.PasefMeta.from_py_ptr">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">py_ptr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.PasefMeta.from_py_ptr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.PasefMeta.get_py_ptr">
+<span class="sig-name descname"><span class="pre">get_py_ptr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.PasefMeta.get_py_ptr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.PasefMeta.isolation_mz">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isolation_mz</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.quadrupole.PasefMeta.isolation_mz" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.PasefMeta.isolation_width">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isolation_width</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#imspy.timstof.quadrupole.PasefMeta.isolation_width" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.PasefMeta.precursor">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precursor</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.quadrupole.PasefMeta.precursor" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.PasefMeta.scan_end">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scan_end</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.quadrupole.PasefMeta.scan_end" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.PasefMeta.scan_start">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scan_start</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.quadrupole.PasefMeta.scan_start" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDDA">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.quadrupole.</span></span><span class="sig-name descname"><span class="pre">TimsTofQuadrupoleDDA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pasef_meta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDDA" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.all_transmitted">
+<span class="sig-name descname"><span class="pre">all_transmitted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_probability</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.all_transmitted" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.any_transmitted">
+<span class="sig-name descname"><span class="pre">any_transmitted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_probability</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.any_transmitted" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.apply_transmission">
+<span class="sig-name descname"><span class="pre">apply_transmission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mz</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.apply_transmission" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>[<code class="xref py py-data docutils literal notranslate"><span class="pre">Any</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">TypeVar</span></code>(<code class="docutils literal notranslate"><span class="pre">_ScalarType_co</span></code>, bound= <code class="xref py py-class docutils literal notranslate"><span class="pre">generic</span></code>, covariant=True)]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.from_py_ptr">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">py_ptr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.from_py_ptr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.get_py_ptr">
+<span class="sig-name descname"><span class="pre">get_py_ptr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.get_py_ptr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.get_transmission_set">
+<span class="sig-name descname"><span class="pre">get_transmission_set</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_probability</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.get_transmission_set" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.is_transmitted">
+<span class="sig-name descname"><span class="pre">is_transmitted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_probability</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.is_transmitted" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.isotopes_transmitted">
+<span class="sig-name descname"><span class="pre">isotopes_transmitted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mz_mono</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_probability</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.isotopes_transmitted" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.transmit_frame">
+<span class="sig-name descname"><span class="pre">transmit_frame</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_probability</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.transmit_frame" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#imspy.timstof.frame.TimsFrame" title="imspy.timstof.frame.TimsFrame"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimsFrame</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.transmit_ion">
+<span class="sig-name descname"><span class="pre">transmit_ion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frames</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scans</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spectrum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_probability</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.transmit_ion" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="imspy.data.html#imspy.data.spectrum.MzSpectrum" title="imspy.data.spectrum.MzSpectrum"><code class="xref py py-class docutils literal notranslate"><span class="pre">MzSpectrum</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.transmit_spectrum">
+<span class="sig-name descname"><span class="pre">transmit_spectrum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">spectrum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_probability</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDDA.transmit_spectrum" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="imspy.data.html#imspy.data.spectrum.MzSpectrum" title="imspy.data.spectrum.MzSpectrum"><code class="xref py py-class docutils literal notranslate"><span class="pre">MzSpectrum</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDIA">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.quadrupole.</span></span><span class="sig-name descname"><span class="pre">TimsTofQuadrupoleDIA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_window_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isolation_mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isolation_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDIA" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.quadrupole.</span></span><span class="sig-name descname"><span class="pre">TimsTofQuadrupoleDIA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame_window_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan_end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isolation_mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isolation_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDIA" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDIA.all_transmitted">
@@ -1249,6 +1608,16 @@ TimsFrame: Subsampled frame.</p>
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDIA.from_py_ptr">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">py_ptr</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDIA.from_py_ptr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDIA.get_py_ptr">
+<span class="sig-name descname"><span class="pre">get_py_ptr</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.quadrupole.TimsTofQuadrupoleDIA.get_py_ptr" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.quadrupole.TimsTofQuadrupoleDIA.get_transmission_set">
@@ -1339,21 +1708,21 @@ TimsFrame: Subsampled frame.</p>
 <span id="imspy-timstof-slice-module"></span><h2>imspy.timstof.slice module<a class="headerlink" href="#module-imspy.timstof.slice" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsPlane">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.slice.</span></span><span class="sig-name descname"><span class="pre">TimsPlane</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.slice.</span></span><span class="sig-name descname"><span class="pre">TimsPlane</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsPlane.df">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">df</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.df" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">df</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.df" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsPlane.frame_ids">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frame_ids</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.frame_ids" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frame_ids</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.frame_ids" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsPlane.from_py_tims_plane">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_tims_plane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plane</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.from_py_tims_plane" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_tims_plane</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plane</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.from_py_tims_plane" title="Link to this definition">¶</a></dt>
 <dd><p>Create a TimsPlane from a PyTimsPlane.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1370,58 +1739,58 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsPlane.intensities">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensities</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.intensities" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">intensities</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.intensities" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsPlane.mobilities">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mobilities</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.mobilities" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mobilities</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.mobilities" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsPlane.mz_mean">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mz_mean</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.mz_mean" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mz_mean</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.mz_mean" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsPlane.mz_std">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mz_std</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.mz_std" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mz_std</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.mz_std" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsPlane.num_points">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_points</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.num_points" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_points</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.num_points" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsPlane.retention_times">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">retention_times</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.retention_times" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">retention_times</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.retention_times" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsPlane.scans">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scans</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.scans" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scans</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.scans" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsPlane.tof_mean">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tof_mean</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.tof_mean" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tof_mean</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.tof_mean" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsPlane.tof_std">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tof_std</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.tof_std" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">tof_std</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsPlane.tof_std" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSlice">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.slice.</span></span><span class="sig-name descname"><span class="pre">TimsSlice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tof</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retention_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mobility</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.slice.TimsSlice" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.slice.</span></span><span class="sig-name descname"><span class="pre">TimsSlice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frame_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scan</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tof</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retention_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mobility</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mz</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intensity</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.slice.TimsSlice" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSlice.df">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">df</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.df" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">df</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.df" title="Link to this definition">¶</a></dt>
 <dd><p>Get the data as a pandas DataFrame.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1497,7 +1866,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSlice.first_frame_id">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">first_frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.first_frame_id" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">first_frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.first_frame_id" title="Link to this definition">¶</a></dt>
 <dd><p>First frame ID.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1511,12 +1880,12 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSlice.fragments">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fragments</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.fragments" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fragments</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.fragments" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSlice.frames">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frames</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#imspy.timstof.frame.TimsFrame" title="imspy.timstof.frame.TimsFrame"><span class="pre">TimsFrame</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.frames" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frames</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#imspy.timstof.frame.TimsFrame" title="imspy.timstof.frame.TimsFrame"><span class="pre">TimsFrame</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.frames" title="Link to this definition">¶</a></dt>
 <dd><p>Get the frames.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1530,7 +1899,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSlice.from_frames">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_frames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.from_frames" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_frames</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">frames</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.from_frames" title="Link to this definition">¶</a></dt>
 <dd><p>Create a TimsSlice from a list of TimsFrames.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1547,7 +1916,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSlice.from_py_tims_slice">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_tims_slice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tims_slice</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.from_py_tims_slice" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_py_tims_slice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tims_slice</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.from_py_tims_slice" title="Link to this definition">¶</a></dt>
 <dd><p>Create a TimsSlice from a PyTimsSlice.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1574,7 +1943,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSlice.last_frame_id">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">last_frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.last_frame_id" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">last_frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.last_frame_id" title="Link to this definition">¶</a></dt>
 <dd><p>Last frame ID.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1588,7 +1957,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSlice.precursors">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precursors</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.precursors" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precursors</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsSlice.precursors" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1668,11 +2037,11 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSliceVectorized">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.slice.</span></span><span class="sig-name descname"><span class="pre">TimsSliceVectorized</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">imspy.timstof.slice.</span></span><span class="sig-name descname"><span class="pre">TimsSliceVectorized</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSliceVectorized.df">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">df</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.df" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">df</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">DataFrame</span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.df" title="Link to this definition">¶</a></dt>
 <dd><p>Get the data as a pandas DataFrame.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1713,7 +2082,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSliceVectorized.first_frame_id">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">first_frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.first_frame_id" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">first_frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.first_frame_id" title="Link to this definition">¶</a></dt>
 <dd><p>First frame ID.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1727,12 +2096,12 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSliceVectorized.fragments">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fragments</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.fragments" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fragments</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.fragments" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSliceVectorized.frames">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frames</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#imspy.timstof.frame.TimsFrameVectorized" title="imspy.timstof.frame.TimsFrameVectorized"><span class="pre">TimsFrameVectorized</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.frames" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frames</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#imspy.timstof.frame.TimsFrameVectorized" title="imspy.timstof.frame.TimsFrameVectorized"><span class="pre">TimsFrameVectorized</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.frames" title="Link to this definition">¶</a></dt>
 <dd><p>Get the frames.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1746,7 +2115,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSliceVectorized.from_vectorized_py_tims_slice">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_vectorized_py_tims_slice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tims_slice</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.from_vectorized_py_tims_slice" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_vectorized_py_tims_slice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tims_slice</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.from_vectorized_py_tims_slice" title="Link to this definition">¶</a></dt>
 <dd><p>Create a TimsSlice from a PyTimsSlice.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1773,7 +2142,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSliceVectorized.last_frame_id">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">last_frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.last_frame_id" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">last_frame_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.last_frame_id" title="Link to this definition">¶</a></dt>
 <dd><p>Last frame ID.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -1787,7 +2156,7 @@ TimsFrame: Subsampled frame.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="imspy.timstof.slice.TimsSliceVectorized.precursors">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precursors</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.precursors" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">precursors</span></span><a class="headerlink" href="#imspy.timstof.slice.TimsSliceVectorized.precursors" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1866,7 +2235,7 @@ TimsFrame: Subsampled frame.</p>
       &#169;2024, David Teschner.
       
       |
-      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
       &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
       
       |
